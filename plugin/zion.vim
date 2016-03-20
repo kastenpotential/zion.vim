@@ -1,2 +1,2 @@
-echom "plugin zion.vim loaded"
+" echom "plugin zion.vim loaded"
 

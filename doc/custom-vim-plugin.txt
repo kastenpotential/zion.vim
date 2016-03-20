@@ -1,0 +1,49 @@
+*custom-vim-plugin.txt*
+
+TODO: Document this!
+
+zion.vim
+    README.md
+    LICENSE
+    after/
+        " Files in this directory will be loaded every time vim starts,
+        " but *after* the files in 'plugin/'
+    autoload/
+        " Autoload is a way to delay th loading of you plugin's code until it's
+        " actually needed.
+        zion.vim
+    colors/
+        " Files inside this dir are treated as color schemes.
+        " :color zion
+        zion.vim
+    compilter/
+        " Files in this dir work excatly like indet files. They should set 
+        " compiler-related options in the current buffer base on their names.
+    doc/
+        " Files inside this dir can add documentation for your plugin or
+        " or something different.
+        " :help zion
+        zion.txt
+    ftdetect/
+        " Any files in here will run *every time* you start Vim. They should
+        " set up autocommands that detect and set the filetype of files,
+        " and *nothing else*.
+        zion.vim
+    ftplugin/
+        " The naming of files in this dir is important! When Vim sets a buffer's
+        " filetype then it looks for a file with the name 'filetype.vim'.
+        " If a directory with the filetype name exists, Vim will run *any files*
+        " inside that directory.
+        zion.vim
+    indent/
+        " Files in this dir get loaded base on their names (like ftplugin).
+        " They should set options related to indentation of their filetypes,
+        " and those options should be buffer-local.
+    plugin/
+        " Files inside this dir will run *every time* Vim starts.
+        zion.vim
+    syntax/
+        zion.vim
+
+
+

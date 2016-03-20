@@ -67,20 +67,20 @@ let maplocalleader = ","
 set mouse=a
 " set vi language to english
 language en_US.utf8
-
-
 " default encodig utf
 set encoding=utf-8
 " enable nice colors
 set t_Co=256
+" use nicer fonts
+" workaround, airline will not load fonts in my config!
+let g:use_patch_fonts = 1
+let g:airline_powerline_fonts = 1
 
-
-
-" colors zenburn
-colors zion
 " and a nice font
-if has("gui_running")
+if has("gui_running") && g:use_patch_fonts
         set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
 endif
+" colors zenburn
+colors zion
 
 

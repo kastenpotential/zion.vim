@@ -98,12 +98,14 @@ hi PreCondit       guifg=#dfaf8f gui=bold                     ctermfg=180 cterm=
 hi PreProc         guifg=#ffcfaf gui=bold                     ctermfg=223 cterm=bold
 hi Question        guifg=#ffffff gui=bold                     ctermfg=231 cterm=bold
 hi Repeat          guifg=#ffd7a7 gui=bold                     ctermfg=223 cterm=bold
-hi Search          guifg=#ffffe0 guibg=#284f28                ctermfg=230 ctermbg=22
+"hi Search          guifg=#ffffe0 guibg=#284f28                ctermfg=230 ctermbg=22
+hi Search          term=reverse cterm=reverse ctermfg=228 ctermbg=23 gui=reverse guifg=#f8f893 guibg=#385f38
 hi SignColumn      guifg=#9fafaf gui=bold                     ctermfg=109 cterm=bold
 hi SpecialChar     guifg=#dca3a3 gui=bold                     ctermfg=181 cterm=bold
 hi SpecialComment  guifg=#82a282 gui=bold                     ctermfg=108 cterm=bold
 hi Special         guifg=#cfbfaf                              ctermfg=181
-hi SpecialKey      guifg=#9ece9e                              ctermfg=151
+"hi SpecialKey      guifg=#9ece9e                              ctermfg=151
+hi SpecialKey      guifg=#9ece9e                              ctermfg=240
 hi Statement       guifg=#e3ceab gui=none                     ctermfg=187 cterm=none
 hi StatusLine      guifg=#313633 guibg=#ccdc90                ctermfg=236 ctermbg=186
 hi StatusLineNC    guifg=#2e3330 guibg=#88b090                ctermfg=235 ctermbg=108
@@ -116,7 +118,8 @@ hi Todo            guifg=#dfdfdf guibg=NONE    gui=bold       ctermfg=254 ctermb
 hi Typedef         guifg=#dfe4cf gui=bold                     ctermfg=253 cterm=bold
 hi Type            guifg=#dfdfbf gui=bold                     ctermfg=187 cterm=bold
 hi Underlined      guifg=#dcdccc gui=underline                ctermfg=188 cterm=underline
-hi VertSplit       guifg=#2e3330 guibg=#688060                ctermfg=236 ctermbg=65
+"hi VertSplit       guifg=#2e3330 guibg=#688060                ctermfg=236 ctermbg=65
+hi VertSplit       ctermfg=240 ctermbg=238 guifg=#b2b2b2 guibg=#444444 cterm=NONE term=NONE
 hi VisualNOS       guifg=#333333 guibg=#f18c96 gui=bold,underline ctermfg=236 ctermbg=210 cterm=bold
 hi WarningMsg      guifg=#ffffff guibg=#333333 gui=bold       ctermfg=231 ctermbg=236 cterm=bold
 hi WildMenu        guifg=#cbecd0 guibg=#2c302d gui=underline  ctermfg=194 ctermbg=236 cterm=underline
@@ -167,7 +170,9 @@ else
     hi NonText       guifg=#5b605e gui=bold                ctermfg=240
     hi Pmenu         guibg=#2c2e2e guifg=#9f9f9f           ctermfg=248 ctermbg=235
     hi PmenuSel      guibg=#242424 guifg=#d0d0a0 gui=bold  ctermfg=187 ctermbg=235 cterm=bold
-    hi MatchParen    guifg=#b2b2a0 guibg=#2e2e2e gui=bold  ctermfg=145 ctermbg=236 cterm=bold
+    "hi MatchParen    guifg=#b2b2a0 guibg=#2e2e2e gui=bold  ctermfg=145 ctermbg=236 cterm=bold
+	hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
+
     hi SignColumn    guibg=#343434                         ctermbg=236
     hi SpecialKey    guibg=#444444
     hi TabLine       guifg=#d0d0b8 guibg=#222222 gui=none  ctermbg=235 ctermfg=187 cterm=none
@@ -320,6 +325,8 @@ if exists("g:zion_enable_TagHighlight") && g:zion_enable_TagHighlight
         hi link Union             WarningMsg
 endif
 
-" TODO check for more obscure syntax groups that they're ok
+" custom splitter chars
+" │ ┃
+set fillchars+=vert:┃
 
 

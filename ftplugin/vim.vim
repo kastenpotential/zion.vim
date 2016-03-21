@@ -64,4 +64,5 @@ endfunction
 nnoremap <buffer> <localleader>h
     \ :call ShowHighlightPreview()<cr>
 
+setlocal foldmethod=marker foldlevelstart=0
 

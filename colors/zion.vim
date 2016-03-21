@@ -157,7 +157,7 @@ else
     " Original, lighter background
     hi Normal        guifg=#dcdccc guibg=#3f3f3f           ctermfg=188 ctermbg=237
     hi ColorColumn   guibg=#484848                         ctermbg=238
-    hi CursorLine    guibg=#434443                         ctermbg=238 cterm=none
+    hi CursorLine    guibg=#434443                         ctermbg=240 cterm=none
     hi CursorLineNr  guifg=#d2d39b guibg=#262626           ctermfg=230 ctermbg=235
     if exists("g:zion_unified_CursorColumn") && g:zion_unified_CursorColumn
         hi CursorColumn  guibg=#434343                     ctermbg=238 cterm=none

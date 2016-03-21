@@ -27,10 +27,16 @@ else
 endif
 
 " enable/disable displaying open splits per tab (only when tabs are opened).
-let g:airline#extensions#tabline#show_splits = 1
+let g:airline#extensions#tabline#show_splits = 0
 
 " configure how numbers are displayed in tab mode. >
 let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_tab_type = 1
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#close_symbol = "X"
+let g:airline#extensions#tabline#tabs_label = 'tabs'
 
 " rename label for tabs (default: 'tabs') (c)
 " let g:airline#extensions#tabline#tabs_label = 'tbak'

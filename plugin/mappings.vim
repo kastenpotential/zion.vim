@@ -35,4 +35,6 @@ inoremap <leader>w <esc>:w<cr>
 nnoremap <leader>w :w<cr>
 inoremap <leader>q <esc>:q<cr>
 nnoremap <leader>q :q<cr>
+inoremap <leader>Q <esc>:q!<cr>
+nnoremap <leader>Q :q!<cr>
 

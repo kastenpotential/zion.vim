@@ -23,13 +23,15 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 " https://github.com/Valloric/YouCompleteMe
 " :help youcompleteme
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
+" https://github.com/Shougo/neocomplete.vim
+Plugin 'Shougo/neocomplete.vim'
 " https://github.com/suan/vim-instant-markdown
 Plugin 'suan/vim-instant-markdown'
 " https://github.com/tpope/vim-markdown
 Plugin 'tpope/vim-markdown'
 " https://github.com/pangloss/vim-javascript
-Plugin 'pangloss/vim-javascript'
+" Plugin 'pangloss/vim-javascript'
 " https://github.com/scrooloose/syntastic
 Plugin 'scrooloose/syntastic'
 " https://github.com/myint/syntastic-extras
@@ -50,7 +52,9 @@ Plugin 'terryma/vim-multiple-cursors'
 " https://github.com/SirVer/ultisnips
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'ervandew/supertab'
+Plugin 'Shougo/vimproc'
+Plugin 'Shougo/vimshell.vim'
+" Plugin 'ervandew/supertab'
 " MY PLUGIN SHOULD BE THE LAST ONE !!!
 Plugin 'kastenpotential/zion.vim'
 call vundle#end()
@@ -82,5 +86,7 @@ if has("gui_running") && g:use_patch_fonts
 endif
 " colors zenburn
 colors zion
+
+" let g:neocomplete#enable_at_startup = 1
 
 

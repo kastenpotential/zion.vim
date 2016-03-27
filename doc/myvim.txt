@@ -1,0 +1,9 @@
+
+
+Insesrt Output of command in buffer:
+	:put =MyTabLine()
+
+Insert Output from external command:
+	:read !figlet "Zion.Vim"
+
+

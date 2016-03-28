@@ -23,7 +23,7 @@ if has("gui_running")
 	let g:airline#extensions#tabline#enabled = 0
 	" enable/disable enhanced tabline.
 else
-	let g:airline#extensions#tabline#enabled = 1
+	let g:airline#extensions#tabline#enabled = 0
 endif
 
 " enable/disable displaying open splits per tab (only when tabs are opened).

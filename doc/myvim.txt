@@ -1,9 +1,31 @@
 
 
-Insesrt Output of command in buffer:
+Tab navigation:
+	gt				goto next tab
+	<C-PageDown>
+	gT				goto previous tab
+	<C-PageUp>
+
+Insesrt output from function in buffer:
 	:put =MyTabLine()
 
-Insert Output from external command:
+Insert output from external command:
 	:read !figlet "Zion.Vim"
 
+Goto definition:
+	gd	will take you to local definition
+	gD	will take you to global definition
+	g*	will search the word under the cursor 
+		(like *, but g* on 'rain' will find words like 'rainbow')
+	g#	same as g* but in backward direction
+	gg	goes to the first line in the buffer
+	G	goes to the last line in the buffer.
+	gf	will go to file under cursor
+	g]	will jump to tag definition.
+
+Zion definitions:
+	<leader>.	nohl
+
+Show where a mapping (for e.g. <F5>) was defined:
+	:99verbose map <F5>
 

@@ -5,5 +5,5 @@ let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:UltiSnipsEditSplit = "horizontal"
 
-
-
+" set user dir to zion.vim/ultisnips
+let g:UltiSnipsSnippetsDir = fnamemodify("ultisnips", ":p")

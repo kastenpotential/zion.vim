@@ -1,5 +1,11 @@
 " echom "zion ftplugin vim loaded."
 
+
+
+nnoremap <buffer> <F5> :source %<cr>
+inoremap <buffer> <F5> <esc>:w<cr>:source %<cr>
+
+
 " Open the buffer with {name} if exists or create it with {type}.
 " call OpenSameBuffer('__Color__Preview__', 'split')
 function! OpenSameBuffer(name, type)
@@ -64,5 +70,5 @@ endfunction
 nnoremap <buffer> <localleader>h
     \ :call ShowHighlightPreview()<cr>
 
-setlocal foldmethod=marker foldlevelstart=0
+setlocal foldmethod=indent foldlevelstart=0
 

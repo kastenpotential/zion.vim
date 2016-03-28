@@ -1,0 +1,5 @@
+
+
+class Plugin(object):
+    pass
+

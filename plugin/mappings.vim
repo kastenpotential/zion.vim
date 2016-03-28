@@ -38,3 +38,9 @@ nnoremap <leader>q :q<cr>
 inoremap <leader>Q <esc>:q!<cr>
 nnoremap <leader>Q :q!<cr>
 
+nnoremap <leader>. :nohl<cr>
+inoremap <leader>. <esc>:nohl<cr>i
+
+" toggel all folds recursively
+nnoremap <space> zA
+

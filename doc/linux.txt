@@ -1,0 +1,32 @@
+*linux.txt*
+
+
+Standard-Befehle über Alternativen konfigurieren: ~
+
+Eine Liste aller konfigurierbaren alternativen Befehle anzeigen: >
+	$ update-alternatives --get-selections
+	appletviewer                   auto     /usr/lib/jvm/java-7-openjdk-amd64/bin/appletviewer
+	java                           auto     /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+	javac                          auto     /usr/lib/jvm/java-7-openjdk-amd64/bin/javac
+<
+Auswahl für ein Programm anzeigen und eine Alternative wählen: >
+	$ sudo update-alternatives --config editor
+	There are 4 choices for the alternative editor (providing /usr/bin/editor).
+
+	  Selection    Path              Priority   Status
+	------------------------------------------------------------
+	* 0            /bin/nano          40        auto mode
+	  1            /bin/ed           -100       manual mode
+	  2            /bin/nano          40        manual mode
+	  3            /usr/bin/emacs24   0         manual mode
+	  4            /usr/bin/mcedit    25        manual mode
+
+	Press <enter> to keep the current choice[*], or type selection number: 
+>
+Neues Programm zur Alternativen hinzufügen: >
+	# update-alternatives --install <link> <name> <path> <priority>
+	$ sudo update-alternatives --install /usr/bin/editor editor /usr/bin/vim 1
+<
+
+
+

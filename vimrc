@@ -26,6 +26,8 @@ Plugin 'tpope/vim-fugitive'
 " Plugin 'Valloric/YouCompleteMe'
 " https://github.com/Shougo/neocomplete.vim
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neco-syntax'
+Plugin 'Shougo/neco-vim'
 " https://github.com/suan/vim-instant-markdown
 Plugin 'suan/vim-instant-markdown'
 " https://github.com/tpope/vim-markdown
@@ -54,6 +56,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Shougo/vimproc'
 Plugin 'Shougo/vimshell.vim'
+" https://github.com/vim-scripts/pythoncomplete
+Plugin 'vim-scripts/pythoncomplete'
 " Plugin 'ervandew/supertab'
 " MY PLUGIN SHOULD BE THE LAST ONE !!!
 Plugin 'kastenpotential/zion.vim'

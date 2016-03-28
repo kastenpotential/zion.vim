@@ -42,7 +42,7 @@ function! RunScript() abort
     endif
 endfunction
 
-nnoremap <F5> :call RunScript()<cr>
-inoremap <F5> <esc>:call RunScript()<cr>
+" nnoremap <F5> :call RunScript()<cr>
+" inoremap <F5> <esc>:call RunScript()<cr>
 
 

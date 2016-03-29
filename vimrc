@@ -45,8 +45,11 @@ Plugin 'jistr/vim-nerdtree-tabs'
 " https://github.com/dkprice/vim-easygrep
 " sudo apt-get install silversearcher-ag
 " Plugin 'dkprice/vim-easygrep'
+" https://github.com/ggreer/the_silver_searcher
+" https://github.com/rking/ag.vim
+Plugin 'rking/ag.vim'
 " https://github.com/dyng/ctrlsf.vim
-"Plugin 'dyng/ctrlsf.vim'
+Plugin 'dyng/ctrlsf.vim'
 " https://github.com/terryma/vim-multiple-cursors
 Plugin 'terryma/vim-multiple-cursors'
 " https://github.com/Shougo/unite.vim

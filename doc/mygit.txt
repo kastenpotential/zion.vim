@@ -1,0 +1,23 @@
+
+
+
+Follow changes of one particular file:
+At current buffer 
+:Glog --follow -- %
+
+Ergebnisse sind in :clist
+:cn for next changes
+
+Show files about to push:
+git diff --stat origin/master
+git push --dry-run
+
+
+Etwas am letzten Commit ändern / hinzufügen:
+git add .
+git commit --amend --no-edit
+
+
+The working tree file and the buffer now have the contents from the index.
+Git checkout -- %
+

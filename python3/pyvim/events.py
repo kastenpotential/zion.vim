@@ -4,9 +4,16 @@ import weakref
 import inspect
 
 
-log = logging.getLogger()
-FocusGained = "FocusGained"
+log = logging.getLogger(__name__)
 
+# when vim got imput focus (only for GUI version)
+FocusGained = "FocusGained"
+# when vim lost imput focus (only for GUI version, may happen on dialog popup)
+FocusLost = "FocusLost"
+# just after entering a tab page (WinEnter -> TabEnter -> BufEnter)
+TabEnter = "TabEnter"
+# just before leaving a tab page (WinLeave -> TabLeave)
+TabLeave = "TabLeave"
 
 class GlobalEvent(object):
     """GlobalEvents Decorator"""
@@ -43,5 +50,21 @@ class GlobalEvent(object):
                     cls._event_dict[name] = list()
                 ref = weakref.WeakMethod(func)
                 cls._event_dict[name].append(ref)
-                vim.command("autocmd FocusGained * nested py3 pv.sendEvent('FocusGained')")
+                cmd = "autocmd {0} * nested py3 pv.sendEvent('{0}')".format(name)
+                log.debug("cmd=%s", cmd)
+                vim.command(cmd)
+
+    @classmethod
+    def notify(cls, event_name):
+        event_methods = cls._event_dict.get(event_name)
+        if event_methods:
+            log.debug("%s events found for %s", len(event_methods), event_name)
+            try:
+                for ref in event_methods:
+                    method = ref()
+                    method()
+            except Exception as ex:
+                log.exception(ex)
+        else:
+            log.debug("no events found for %s", event_name)
 

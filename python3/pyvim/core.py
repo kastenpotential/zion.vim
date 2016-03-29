@@ -9,6 +9,7 @@ from pyvim import logger, config, events
 pv = None  # global variable to use in vim
 log = None
 
+
 class PyVimCore(object):
     """docstring for PyVimCor """
 
@@ -25,7 +26,8 @@ class PyVimCore(object):
             log.debug(plugin_name)
             module_name, class_name = plugin_name.rsplit(".", 1)
             log.debug("module_name=%s class_name=%s", module_name, class_name)
-            PluginClass = getattr(importlib.import_module(module_name), class_name)
+            module = importlib.import_module(module_name)
+            PluginClass = getattr(module, class_name)
             plugin_instance = PluginClass()
             self._plugins[plugin_name] = plugin_instance
             events.GlobalEvent.register(plugin_instance)
@@ -35,6 +37,7 @@ class PyVimCore(object):
 
     def sendEvent(self, name):
         log.debug("name=%s", name)
+        events.GlobalEvent.notify(name)
 
     def showDebug(self):
         print("hello debug")

@@ -15,6 +15,6 @@ let NERDTreeQuitOnOpen = 0
 " don't collaps empty nodes
 let NERDTreeCascadeOpenSingleChildDir = 0
 
-let g:nerdtree_tabs_open_on_new_tab = 1
+let g:nerdtree_tabs_open_on_new_tab = 0
 map <F2> <plug>NERDTreeMirrorToggle<CR>
 

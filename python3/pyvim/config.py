@@ -10,7 +10,8 @@ class Config(object):
     """ Default configurations for Zion / PyVim. """
 
     plugins = [
-        "pyvim.eventlogger.EventLogger"
+        "pyvim.eventlogger.EventLogger",
+        "pyvim.tabline.TabLine"
     ]
 
     def __init__(self):

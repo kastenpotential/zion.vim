@@ -1,10 +1,9 @@
 from pyvim.plugin import Plugin
 import logging
-from pyvim.core import pv
-from pyvim import const, events
+from pyvim import events
 
 
-log = logging.getLogger()
+log = logging.getLogger(__name__)
 
 
 class EventLogger(Plugin):
@@ -20,4 +19,20 @@ class EventLogger(Plugin):
 
     @events.GlobalEvent(events.FocusGained)
     def onFocusGained(self):
+        """Log the event FocusGained."""
         log.debug("onFocusGained called.")
+
+    @events.GlobalEvent(events.FocusLost)
+    def onFocusLost(self):
+        """Log the event FocusLost."""
+        log.debug("onFocusLost called.")
+
+    @events.GlobalEvent(events.TabEnter)
+    def onTabEnter(self):
+        """Log the event TabEnter."""
+        log.debug("onTabEnter called.")
+
+    @events.GlobalEvent(events.TabLeave)
+    def onTabLeave(self):
+        """Log the event TabLeave."""
+        log.debug("onTabLeave called.")

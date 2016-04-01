@@ -14,9 +14,6 @@ class EventLogger(Plugin):
         """Initializes the plugin. """
         log.info("EventLogger initialized.")
 
-    def __del__(self):
-        log.info("EventLogger deleted.")
-
     @events.GlobalEvent(events.FocusGained)
     def onFocusGained(self):
         """Log the event FocusGained."""

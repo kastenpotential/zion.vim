@@ -14,6 +14,8 @@ FocusLost = "FocusLost"
 TabEnter = "TabEnter"
 # just before leaving a tab page (WinLeave -> TabLeave)
 TabLeave = "TabLeave"
+# after entering a buffer. useful for setting filetype. after BufReadPost
+BufEnter = "BufEnter"
 
 class GlobalEvent(object):
     """GlobalEvents Decorator"""

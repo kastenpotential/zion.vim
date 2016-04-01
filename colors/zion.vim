@@ -182,6 +182,18 @@ else
     hi StatusLine    ctermbg=144
 endif
 
+
+hi TabLine ctermfg=249 ctermbg=238 guifg=#b2b2b2 guibg=#3a3a3a cterm=none
+
+hi TabLineSel ctermfg=238 ctermbg=150 guifg=#303030 guibg=#afd787 cterm=none
+hi TabLineSelInv ctermbg=238 ctermfg=150 guibg=#303030 guifg=#afd787 cterm=none
+
+hi TabLineFill ctermfg=150 ctermbg=238 guifg=#afd787 guibg=#444444
+
+hi TabLineTypeInv ctermbg=238 ctermfg=182 guibg=#303030 guifg=#d7afd7
+hi TabLineType ctermfg=236 ctermbg=182 guifg=#303030 guibg=#d7afd7
+
+
 if exists("g:zion_force_dark_Background") && g:zion_force_dark_Background
     " Force dark background, because of a bug in VIM:  VIM sets background
     " automatically during "hi Normal ctermfg=X"; it misinterprets the high

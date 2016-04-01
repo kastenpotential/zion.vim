@@ -6,6 +6,6 @@ nnoremap <leader>p "zyi':exec ":CtrlP ". join(split(@z, '.'), '' ).""<cr>
 nnoremap <F3> :CtrlSFToggle<cr>
 
 
-nnoremap <c-s-f> :CtrlSF -I
+nnoremap <C-S-F> :CtrlSF -I<space>
 
 

@@ -49,4 +49,3 @@ def init():
     pv = PyVimCore()
     return pv
 
-init()

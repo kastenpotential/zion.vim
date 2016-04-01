@@ -95,5 +95,8 @@ endif
 colors zion
 
 " let g:neocomplete#enable_at_startup = 1
-
+py3 << EOF
+import pyvim.core
+pv = pyvim.core.init()
+EOF
 

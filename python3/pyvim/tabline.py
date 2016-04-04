@@ -69,8 +69,8 @@ class TabLine(Plugin):
         log.info("TabLine initialized.")
         self._segments = []
         self.showTabline()
-        self.update()
-        self.render()
+        # self.update()
+        # self.render()
 
     def showTabline(self, mode=ALWAYS):
         vim.options["showtabline"] = mode

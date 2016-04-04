@@ -1,3 +1,14 @@
+*myvim*
+
+================================================================================
+
+Normal mode commands:~
+
+r		substitute a character under the cursor (stay in normal mode)
+s		delete a character unter the cursor (switch to insert mode)
+.		repeat last command
+S		delete line under cursor (switch to insert mode)
+
 
 
 Tab navigation:
@@ -29,3 +40,5 @@ Zion definitions:
 Show where a mapping (for e.g. <F5>) was defined:
 	:99verbose map <F5>
 
+
+aaaaaaaabttttbbbbtaaaaaaatddddddddd

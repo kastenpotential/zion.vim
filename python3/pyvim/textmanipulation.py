@@ -49,7 +49,7 @@ class TextManipulation(Plugin):
         log.debug("inmoveup")
         return "helllo move up"
 
-    @events.KeyEvent("<leader>c")
+    # @events.KeyEvent("<leader>c")
     def toggleLineComment(self):
         toggle_line_comment()
 

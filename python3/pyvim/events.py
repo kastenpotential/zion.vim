@@ -73,6 +73,8 @@ class BaseEvent(object):
                     method()
             except Exception as ex:
                 log.exception(ex)
+                # log.debug("args=%s", list(ex.args))
+                vim.command("echom '{}'".format(ex.args[0]))
         else:
             log.debug("no events found for %s", event_name)
         log.debug("done.")

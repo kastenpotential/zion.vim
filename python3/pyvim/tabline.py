@@ -143,8 +143,8 @@ class TabLine(Plugin):
         vim.command("tabclose")
 
     def gotoTab(self, nr):
-        if not 0 < nr < len(vim.tabpages):
-            log.debug("invalid tabpage: not 0 < %s < %s", nr, len(vim.tabpages))
+        if not 1 <= nr <= len(vim.tabpages):
+            log.debug("invalid tabpage: not 1 <= %s <= %s", nr, len(vim.tabpages))
             return
         src_nr = vim.current.tabpage.number
         if nr == src_nr:

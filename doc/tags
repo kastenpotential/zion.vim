@@ -1,4 +1,6 @@
 after	custom-vim-plugin.txt	/*after*
 custom-vim-plugin.txt	custom-vim-plugin.txt	/*custom-vim-plugin.txt*
 linux.txt	linux.txt	/*linux.txt*
+mygit	mygit.txt	/*mygit*
+myvim	myvim.txt	/*myvim*
 zion.vim	zion.txt	/*zion.vim*

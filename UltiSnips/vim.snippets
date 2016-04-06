@@ -1,0 +1,9 @@
+snippet aug "autocommand group" b
+" ${1:aug_name} ------------------------------{{{
+augroup $1
+	autocmd!
+	${0:${VISUAL:default value}}
+augroup END
+" $1 }}}
+endsnippet
+

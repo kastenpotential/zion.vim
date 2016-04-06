@@ -75,7 +75,7 @@ filetype plugin indent on
 let mapleader = ","
 let maplocalleader = ","
 " enable mouse integration
-set mouse=a
+set mouse=nvi
 " set vi language to english
 language en_US.utf8
 " default encodig utf

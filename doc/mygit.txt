@@ -1,8 +1,43 @@
+*mygit*
+
+=============================================================================
+
+Git Flow Workflow~
+
+First things first, you need to install git-flow: >
+	apt-get install git-flow
+<
+Then initialize git-flow in an existing repository. You'll have to
+answer some question regarding your naming conventions, but it is
+recommanded to use the default values. >
+	git flow init
+<
+Start develop a new feature from the 'develop' branch: >
+	git flow feature start MYFEATURE
+<
+If you ware developing a feature in collaboration, publish the feature to
+the remote server: >
+	git flow feature publish MYFEATURE
+<
+To get the feature published by another user: >
+	git flow feature pull origin MYFEATURE
+<
+You an track a feature on origin by using: >
+	git flow feature track MYFEATURE
+<
+Finish a feature, merge the feature into 'develop' branch, remove
+the feature branch and switch back to 'develop': >
+	git flow feature finish MYFEATURE
+<
 
 
+Links:
+* http://danielkummer.github.io/git-flow-cheatsheet/
+
+=============================================================================
 
 Follow changes of one particular file:
-At current buffer 
+At current buffer
 :Glog --follow -- %
 
 Ergebnisse sind in :clist

@@ -11,7 +11,8 @@ class Config(object):
 
     plugins = [
         "pyvim.eventlogger.EventLogger",
-        "pyvim.tabline.TabLine"
+        "pyvim.tabline.TabLine",
+        "pyvim.textmanipulation.TextManipulation"
     ]
 
     def __init__(self):

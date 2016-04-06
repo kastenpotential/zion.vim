@@ -2,40 +2,31 @@
 """
 Python3 support for Vim.
 """
-from pyvim import logger
-# from pyvim.events import GlobalEvents
-from pyvim import config
-import importlib
+from pyvim import events
 import vim
 
 
-events = None  # global vim events
-plugins = {}
-log = None
+__core__ = None  # the python core
+__win__ = None  # the window manager
 
 
-def init():
-    """ Initializes the Python Vim extension. """
-    global log
-    conf = config.Config()
-    log = logger.init()
-    global events
-    events = GlobalEvents()
-    for plugin_name in conf.plugins:
-        try:
-            print(plugin_name)
-            module_name, class_name = plugin_name.rsplit(".", 1)
-            PluginClass = getattr(importlib.import_module(module_name), class_name)
-            plugin_instance = PluginClass()
-            plugins[plugin_name] = plugin_instance
-        except Exception as ex:
-            log.error("unable to initialize %s", plugin_name)
-            log.exception(ex)
+def send_global_event(name):
+    events.GlobalEvent.notify(name)
 
 
-def on(event, callback):
-    cmd = "autocmd {0} * nested py3 {1}()".format(event.name, callback)
-    log.debug("cmd=%s", cmd)
-    # vim.command(cmd)
+def send_key_event(name):
+    events.KeyEvent.notify(name)
 
-init()
+
+def get_window(nr):
+    """Returns the window with the given number."""
+    __win__.get_window(nr)
+
+
+def window():
+    return __win__.current()
+
+
+def buffer():
+    return __win__.current().buffer
+

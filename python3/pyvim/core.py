@@ -6,7 +6,6 @@ import importlib
 from pyvim import logger, config, events
 
 
-pv = None  # global variable to use in vim
 log = None
 
 
@@ -31,6 +30,7 @@ class PyVimCore(object):
             plugin_instance = PluginClass()
             self._plugins[plugin_name] = plugin_instance
             events.GlobalEvent.register(plugin_instance)
+            events.KeyEvent.register(plugin_instance)
         except Exception as ex:
             log.error("unable to initialize plugin %s", plugin_name)
             log.exception(ex)
@@ -45,7 +45,8 @@ class PyVimCore(object):
 
 def init():
     """Initializes the core library."""
-    global pv
-    pv = PyVimCore()
+    from pyvim import pv
+    pv.__core__ = PyVimCore()
+    from pyvim.window import WindowManager
+    pv.__win__ = WindowManager()
     return pv
-

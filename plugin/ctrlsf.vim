@@ -9,3 +9,4 @@ nnoremap <F3> :CtrlSFToggle<cr>
 nnoremap <C-S-F> :CtrlSF -I<space>
 
 
+

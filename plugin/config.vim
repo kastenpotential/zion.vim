@@ -48,6 +48,9 @@ set whichwrap=b,s,<,>,[,]
 " nice chars:⋮ ⋯ ⋰  ⋱ ⁞┊ ⁞┋ │ ┃ ├→ → … ܅
 set list
 set listchars=tab:→\ ,trail:܅
+" copy and paste in command line
+cnoremap <MiddleMouse> <C-R>+
+cnoremap <C-V> <C-R>+
 
 
 

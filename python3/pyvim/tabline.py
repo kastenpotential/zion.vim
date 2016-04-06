@@ -69,8 +69,8 @@ class TabLine(Plugin):
         log.info("TabLine initialized.")
         self._segments = []
         self.showTabline()
-        self.update()
-        self.render()
+        # self.update()
+        # self.render()
 
     def showTabline(self, mode=ALWAYS):
         vim.options["showtabline"] = mode
@@ -101,3 +101,55 @@ class TabLine(Plugin):
     def onTabLeave(self):
         """Log the event TabLeave."""
         log.debug("onTabLeave called.")
+
+    @events.KeyEvent("<leader>1")
+    def gotoTab1(self):
+        self.gotoTab(1)
+
+    @events.KeyEvent("<leader>2")
+    def gotoTab2(self):
+        self.gotoTab(2)
+
+    @events.KeyEvent("<leader>3")
+    def gotoTab3(self):
+        self.gotoTab(3)
+
+    @events.KeyEvent("<leader>4")
+    def gotoTab4(self):
+        self.gotoTab(4)
+
+    @events.KeyEvent("<leader>5")
+    def gotoTab5(self):
+        self.gotoTab(5)
+
+    @events.KeyEvent("<leader>6")
+    def gotoTab6(self):
+        self.gotoTab(6)
+
+    @events.KeyEvent("<leader>7")
+    def gotoTab7(self):
+        self.gotoTab(7)
+
+    @events.KeyEvent("<leader>8")
+    def gotoTab8(self):
+        self.gotoTab(8)
+
+    @events.KeyEvent("<leader>9")
+    def gotoTab9(self):
+        self.gotoTab(9)
+
+    @events.KeyEvent("<leader>0")
+    def closeCurrentTabpage(self):
+        vim.command("tabclose")
+
+    def gotoTab(self, nr):
+        if not 1 <= nr <= len(vim.tabpages):
+            log.debug("invalid tabpage: not 1 <= %s <= %s", nr, len(vim.tabpages))
+            return
+        src_nr = vim.current.tabpage.number
+        if nr == src_nr:
+            log.debug("%s is already current tabpage", nr)
+            return
+        dst = vim.tabpages[nr-1]
+        log.debug("nr=%s src=%s dst=%s", nr, src_nr, dst.number)
+        vim.current.tabpage = dst

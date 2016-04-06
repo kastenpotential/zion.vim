@@ -23,7 +23,7 @@
 " enable javascript completion
 " cd YouCompleteMe/third_party/ycmd/third_party/tern' and run 'npm install --production'
 
-let g:UltiSnipsSnippetsDir = fnamemodify("ultisnips", ":p")
+" let g:UltiSnipsSnippetsDir = fnamemodify("ultisnips", ":p")
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0

@@ -60,4 +60,8 @@ let g:ctrlp_prompt_mappings = {
 " disable sorting when searching in mru mode
 let g:ctrlp_mruf_default_order = 1
 
+" set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/pcs/docs/*,*/pcs/build/*,*/pcs/extjs/*
+" set wildignore breaks vimdiff for git
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|docs|extjs'
 
